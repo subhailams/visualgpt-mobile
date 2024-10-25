@@ -1,0 +1,8 @@
+**/__pycache__/
+*.bin
+*.pt
+*.dat
+**/node_modules/*
+**/processed_images/*
+**/uploads/*
+db.sqlite3

@@ -1,0 +1,211 @@
+@import-normalize;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://rsms.me/inter/inter.css");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.circle-cursor {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewport="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/></svg>'), auto;
+}
+
+@layer utilities {
+  /* Responsive adjustments for Google Pixel 3a (width: ~412px) */
+  @media (min-width: 390px) {
+    .responsive-nav {
+      @apply grid grid-cols-3;
+    }
+    
+    .responsive-sidebar {
+      @apply hidden;
+    }
+
+    .responsive-chatview {
+      @apply flex-row;
+    }
+  }
+
+  /* Add other responsive styles here */
+}
+
+/* General media query for adjusting small details ideal for Google Pixel 3a */
+@media (min-width: 390px) and (max-width: 420px) {
+  .sidebar {
+    @apply hidden; /* Example: Hide sidebar when on narrow screens */
+  }
+  
+  .chatview__chatarea {
+    @apply flex-1; /* Expand chat area when sidebar is hidden */
+  }
+
+  .message {
+    @apply text-sm; /* Adjust text size for better readability */
+  }
+
+  .dropdown {
+    @apply px-1; /* Adjust padding for dropdowns to save space */
+  }
+}
+
+/* Example of hiding elements or changing layout dynamically */
+@media (max-width: 420px) {
+  .responsive-hide {
+    display: none;
+  }
+
+  .responsive-grid {
+    @apply grid-cols-2; /* Adjust grid columns for narrow screens */
+  }
+}
+
+
+@layer components {
+  /* SideBar */
+  .sidebar {
+    @apply flex flex-col gap-y-4 h-screen bg-dark-grey p-2 pt-4 relative duration-300;
+  }
+
+  .sidebar__app-bar {
+    @apply flex justify-center gap-4 items-center;
+  }
+
+  .sidebar__app-title {
+    @apply text-white font-medium text-xl duration-300;
+    margin-right: 50px;
+    font-size: 1.6rem;
+  }
+
+  .sidebar__btn-close {
+    @apply cursor-pointer duration-300 text-white justify-end;
+  }
+
+  .sidebar__btn-icon {
+    @apply w-8 h-8;
+  }
+
+  .sidebar__app-logo {
+    @apply justify-center cursor-pointer duration-300 text-white;
+  }
+
+  /* SideBar Nav */
+  .nav {
+    @apply flex justify-around;
+  }
+
+  .nav__item {
+    @apply px-4 py-3 flex items-center gap-x-4 w-screen 
+    rounded-md cursor-pointer 
+    /* hover:bg-light-white */
+    text-white text-base;
+    font-size: 1.6rem;
+  }
+
+  .nav__icons {
+    @apply cursor-pointer duration-300 text-white
+    text-xl;
+  }
+
+  .nav__bottom {
+    @apply flex flex-col justify-end h-screen;
+  }
+
+  .nav__msg {
+    @apply flex bg-yellow-900 rounded-xl p-4 text-white;
+  }
+
+  .nav__p {
+    @apply font-mono;
+  }
+
+  /* MainChat */
+  .chatview {
+    @apply flex flex-col h-screen duration-300 overflow-hidden relative bg-slate-200
+  dark:bg-light-grey;
+  }
+
+  .chatview__chatarea {
+    @apply flex-grow w-full overflow-y-scroll flex flex-col shadow-md;
+  }
+
+  .form {
+    @apply flex justify-between flex-col items-stretch sm:flex-row m-2 bottom-0 left-0 right-0
+    text-black dark:text-white duration-300;
+  }
+
+  .dropdown {
+    @apply dark:bg-light-grey h-16 px-3 rounded-xl bg-light-white
+     hover:bg-slate-200 hover:dark:bg-dark-grey border-2 border-slate-400
+    dark:border-slate-500 focus:ring-offset-indigo-200 text-black
+     dark:text-white transition  ease-in-out duration-300 text-center 
+     text-base font-semibold shadow-md  focus:outline-none focus:ring-2
+      focus:ring-offset-2;
+  }
+
+  .message__img {
+    @apply rounded-lg shadow-lg bg-cover bg-gray-400 w-[512px] duration-300 ease-out;
+  }
+
+  .message__img__user {
+    @apply rounded-lg shadow-lg bg-cover bg-gray-400 w-[512px] duration-300 ease-out float-right;
+  }
+  
+
+
+  .chatview__textarea-message {
+    @apply bg-light-white ml-0 sm:ml-2 dark:bg-light-grey text-3xl h-16 sm:w-full grow max-h-[20rem] min-h-[4rem] p-2 
+    border-2 border-slate-400 dark:border-slate-500 overflow-y-hidden mx-2
+    focus:ring-offset-indigo-200 focus:ring-2 focus:ring-offset-2
+    resize-y rounded-xl;
+  }
+
+  .chatview__btn-send {
+    @apply h-16 w-16 px-4 rounded-full hover:bg-slate-200 hover:dark:bg-dark-grey border-2 border-slate-400
+    dark:border-slate-500 focus:ring-offset-indigo-200 text-black dark:text-white transition 
+    ease-in-out duration-300 text-center text-base font-semibold shadow-md 
+    focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .chatview__btn-send:disabled {
+    @apply opacity-40 transition ease-in duration-300 text-center text-base font-semibold shadow-md;
+  }
+
+  /* Message */
+  .message {
+    @apply py-5 gap-2 flex items-start justify-end ;
+  }
+
+  .message__wrapper {
+    @apply flex-grow w-screen flex-wrap overflow-hidden;
+  }
+
+  .message__markdown {
+    @apply text-3xl text-slate-700 dark:text-slate-200;
+  }
+  .message__createdAt {
+    @apply text-sm font-thin italic text-slate-600 dark:text-slate-300;
+  }
+
+  .message__pic {
+    @apply h-8 w-8 bg-slate-200 mx-2 rounded-full flex items-center justify-center text-xl;
+  }
+
+  .message__thinking {
+    @apply animate-pulse duration-1000 h-12 w-12 dark:text-white text-black text-xl;
+  }
+
+}
+
+::-webkit-scrollbar {
+  @apply bg-transparent w-1;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-light-grey dark:bg-dark-grey rounded-xl;
+}

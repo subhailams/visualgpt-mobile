@@ -1,0 +1,37 @@
+2024-03-15 19:59:57,945 [+] pydumpck is a multi-threads tool for decompile exe,elf,pyz,pyc packed by python which is base on pycdc and uncompyle6.sometimes its py-file result not exactly right ,maybe could use uncompyle6.
+--------------------
+pydumpck initilizing with 1.17.9 :pyinstaller_dump.py:115-20  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyinstaller_dump.py on(pyinstaller_dump.run) at 54040@MainThread  
+2024-03-15 19:59:57,945 [*] plugins loaded with ['pycdc'] :__init__.py:155-10  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/py_common_dump/__init__.py on(__init__.load_plugins) at 54040@MainThread  
+2024-03-15 19:59:57,945 [*] target file input:__pycache__/drag.cpython-38.pyc
+to:output_5701686 :__init__.py:190-10  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/py_common_dump/__init__.py on(__init__.main) at 54040@MainThread  
+2024-03-15 19:59:57,945 [*] start dump target file. type:pyc :__init__.py:203-10  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/py_common_dump/__init__.py on(__init__.main) at 54040@MainThread  
+2024-03-15 20:00:00,953 [+] find suitable python-version:(3, 10),magic:3439 :__init__.py:41-20  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyc_checker/pyc/__init__.py on(__init__.check_marshal) at 54040@MainThread  
+2024-03-15 20:00:00,954 [-] pycdc_file not exist , trying build it... :__init__.py:21-40  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyc_checker/lib_pycdc/__init__.py on(__init__.use_pycdc) at 54040@MainThread  
+2024-03-15 20:00:05,961 [*] no cache exist , start build :build.py:51-10  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyc_checker/lib_pycdc/build.py on(build.build) at 54040@MainThread  
+2024-03-15 20:00:16,013 [*] moving pycdc file /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyc_checker/lib_pycdc/src/output/pycdc , has cache:/data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyc_checker/lib_pycdc/pycdc :build.py:57-10  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyc_checker/lib_pycdc/build.py on(build.build) at 54040@MainThread  
+2024-03-15 20:00:16,035 [*] completed built :build.py:65-10  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyc_checker/lib_pycdc/build.py on(build.build) at 54040@MainThread  
+2024-03-15 20:00:16,035 [+] get compile file path:/data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyc_checker/lib_pycdc/pycdc,is_build:True :__init__.py:25-20  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyc_checker/lib_pycdc/__init__.py on(__init__.use_pycdc) at 54040@MainThread  
+2024-03-15 20:00:16,044 [!] 
+Warning: block stack is not empty!
+Warning: Stack history is not empty!
+Warning: block stack is not empty!
+on exec_pycdc:output_5701686/drag.cpython-38.pyc.structed.pyc :__init__.py:55-30  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyc_checker/__init__.py on(__init__.exec_pycdc) at 54040@MainThread  
+2024-03-15 20:00:16,045 [+] decompile bytecode by pycdc success on file:output_5701686/drag.cpython-38.pyc,length:8072 :__init__.py:62-20  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyc_checker/__init__.py on(__init__.exec_pycdc) at 54040@MainThread  
+2024-03-15 20:00:16,045 [+] decompile bytecode on file:output_5701686/drag.cpython-38.pyc,length:8072 :__init__.py:39-20  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/py_package/package_struct/__init__.py on(__init__.decompile_pyc) at 54040@MainThread  
+2024-03-15 20:00:16,046 [+] completed,cost 18101ms with result:pyc file handled:output_5701686/drag.cpython-38.pyc :__init__.py:167-20  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/py_common_dump/__init__.py on(__init__.statistics_status) at 54040@MainThread  
+2024-03-15 20:00:24,735 [+] pydumpck is a multi-threads tool for decompile exe,elf,pyz,pyc packed by python which is base on pycdc and uncompyle6.sometimes its py-file result not exactly right ,maybe could use uncompyle6.
+--------------------
+pydumpck initilizing with 1.17.9 :pyinstaller_dump.py:115-20  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyinstaller_dump.py on(pyinstaller_dump.run) at 54505@MainThread  
+2024-03-15 20:00:24,735 [*] plugins loaded with ['pycdc'] :__init__.py:155-10  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/py_common_dump/__init__.py on(__init__.load_plugins) at 54505@MainThread  
+2024-03-15 20:00:24,736 [*] target file input:__pycache__/drag.cpython-38.pyc
+to:output_6905491 :__init__.py:190-10  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/py_common_dump/__init__.py on(__init__.main) at 54505@MainThread  
+2024-03-15 20:00:24,736 [*] start dump target file. type:pyc :__init__.py:203-10  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/py_common_dump/__init__.py on(__init__.main) at 54505@MainThread  
+2024-03-15 20:00:27,744 [+] find suitable python-version:(3, 10),magic:3439 :__init__.py:41-20  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyc_checker/pyc/__init__.py on(__init__.check_marshal) at 54505@MainThread  
+2024-03-15 20:00:27,755 [!] 
+Warning: block stack is not empty!
+Warning: Stack history is not empty!
+Warning: block stack is not empty!
+on exec_pycdc:output_6905491/drag.cpython-38.pyc.structed.pyc :__init__.py:55-30  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyc_checker/__init__.py on(__init__.exec_pycdc) at 54505@MainThread  
+2024-03-15 20:00:27,756 [+] decompile bytecode by pycdc success on file:output_6905491/drag.cpython-38.pyc,length:8072 :__init__.py:62-20  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/pyc_checker/__init__.py on(__init__.exec_pycdc) at 54505@MainThread  
+2024-03-15 20:00:27,757 [+] decompile bytecode on file:output_6905491/drag.cpython-38.pyc,length:8072 :__init__.py:39-20  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/py_package/package_struct/__init__.py on(__init__.decompile_pyc) at 54505@MainThread  
+2024-03-15 20:00:27,757 [+] completed,cost 3022ms with result:pyc file handled:output_6905491/drag.cpython-38.pyc :__init__.py:167-20  /data/silama3/anaconda3/envs/dragdiff/lib/python3.8/site-packages/pydumpck/py_common_dump/__init__.py on(__init__.statistics_status) at 54505@MainThread  
